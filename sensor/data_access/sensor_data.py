@@ -46,12 +46,12 @@ class SensorData:
             export entire collectin as dataframe:
             return pd.DataFrame of collection
             """
-            if database_name is None:
+            if database_name is None:  
                 collection = self.mongo_client.database[collection_name]
             else:
                 collection = self.mongo_client[database_name][collection_name]
             df = pd.DataFrame(list(collection.find()))
-
+            print(df)
             if "_id" in df.columns.to_list():
                 df = df.drop(columns=["_id"], axis=1)
 
