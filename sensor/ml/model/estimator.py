@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 from sensor.constant.training_pipeline import SAVED_MODEL_DIR,MODEL_FILE_NAME
 import os
+=======
+
+>>>>>>> origin/main
 class TargetValueMapping:
     def __init__(self):
         self.neg: int = 0
@@ -13,12 +17,16 @@ class TargetValueMapping:
         return dict(zip(mapping_response.values(), mapping_response.keys()))
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/main
 #Write a code to train model and check the accuracy.
 
 class SensorModel:
 
+<<<<<<< HEAD
     def __init__(self,preprocessor,model):
         try:
             self.preprocessor = preprocessor
@@ -70,5 +78,11 @@ class ModelResolver:
             return True
         except Exception as e:
             raise e
+=======
+
+    def get_best_model():
+        pass
+
+>>>>>>> origin/main
 
 

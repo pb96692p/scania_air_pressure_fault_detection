@@ -2,7 +2,11 @@ import sys
 
 
 def error_message_detail(error, error_detail: sys):
+<<<<<<< HEAD
     _, _, exc_tb = error_detail.exc_info()
+=======
+   
+>>>>>>> origin/main
 
     file_name = exc_tb.tb_frame.f_code.co_filename
 

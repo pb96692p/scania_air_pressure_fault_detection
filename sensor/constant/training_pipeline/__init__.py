@@ -1,7 +1,10 @@
 import os
 from sensor.constant.s3_bucket import TRAINING_BUCKET_NAME
 
+<<<<<<< HEAD
 SAVED_MODEL_DIR =os.path.join("saved_models")
+=======
+>>>>>>> origin/main
 # defining common constant variable for training pipeline
 TARGET_COLUMN = "class"
 PIPELINE_NAME: str = "sensor"
@@ -20,7 +23,11 @@ SCHEMA_DROP_COLS = "drop_columns"
 """
 Data Ingestion related constant start with DATA_INGESTION VAR NAME
 """
+<<<<<<< HEAD
 DATA_INGESTION_COLLECTION_NAME: str = "sensor"
+=======
+DATA_INGESTION_COLLECTION_NAME: str = "car"
+>>>>>>> origin/main
 DATA_INGESTION_DIR_NAME: str = "data_ingestion"
 DATA_INGESTION_FEATURE_STORE_DIR: str = "feature_store"
 DATA_INGESTION_INGESTED_DIR: str = "ingested"
@@ -43,6 +50,7 @@ Data Transformation ralated constant start with DATA_TRANSFORMATION VAR NAME
 DATA_TRANSFORMATION_DIR_NAME: str = "data_transformation"
 DATA_TRANSFORMATION_TRANSFORMED_DATA_DIR: str = "transformed"
 DATA_TRANSFORMATION_TRANSFORMED_OBJECT_DIR: str = "transformed_object"
+<<<<<<< HEAD
 
 """
 Model Trainer ralated constant start with MODE TRAINER VAR NAME
@@ -65,3 +73,5 @@ MODEL_EVALUATION_REPORT_NAME= "report.yaml"
 
 MODEL_PUSHER_DIR_NAME = "model_pusher"
 MODEL_PUSHER_SAVED_MODEL_DIR = SAVED_MODEL_DIR
+=======
+>>>>>>> origin/main

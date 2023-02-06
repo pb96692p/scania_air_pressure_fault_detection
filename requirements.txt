@@ -2,6 +2,10 @@ dill==0.3.5.1
 dnspython==2.2.1
 evidently==0.1.58.dev0
 fastapi==0.78.0
+<<<<<<< HEAD
+=======
+from-root==1.0.2
+>>>>>>> origin/main
 httptools==0.5.0
 imblearn==0.0
 mypy-boto3-s3==1.24.76
@@ -15,4 +19,9 @@ websockets==10.3
 wincertstore==0.2
 xgboost==1.6.2
 neuro-mf==0.0.5
+<<<<<<< HEAD
+=======
+catboost==1.1
+seaborn
+>>>>>>> origin/main
 -e .

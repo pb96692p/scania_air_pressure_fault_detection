@@ -64,6 +64,7 @@ def save_object(file_path: str, obj: object) -> None:
         logging.info("Exited the save_object method of MainUtils class")
     except Exception as e:
         raise SensorException(e, sys) from e
+<<<<<<< HEAD
 
 
 def load_object(file_path: str, ) -> object:
@@ -74,3 +75,5 @@ def load_object(file_path: str, ) -> object:
             return dill.load(file_obj)
     except Exception as e:
         raise SensorException(e, sys) from e
+=======
+>>>>>>> origin/main

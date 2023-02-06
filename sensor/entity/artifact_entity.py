@@ -23,6 +23,7 @@ class DataTransformationArtifact:
     transformed_object_file_path: str
     transformed_train_file_path: str
     transformed_test_file_path: str
+<<<<<<< HEAD
 
 
 
@@ -52,3 +53,5 @@ class ModelEvaluationArtifact:
 class ModelPusherArtifact:
     saved_model_path:str
     model_file_path:str
+=======
+>>>>>>> origin/main

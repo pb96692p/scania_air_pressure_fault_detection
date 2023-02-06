@@ -1,13 +1,17 @@
 from sensor.entity.config_entity import TrainingPipelineConfig,DataIngestionConfig,DataValidationConfig,DataTransformationConfig
 from sensor.entity.artifact_entity import DataIngestionArtifact, DataValidationArtifact,DataTransformationArtifact
+<<<<<<< HEAD
 from sensor.entity.artifact_entity import ModelEvaluationArtifact,ModelPusherArtifact,ModelTrainerArtifact
 from sensor.entity.config_entity import ModelPusherConfig,ModelEvaluationConfig,ModelTrainerConfig
+=======
+>>>>>>> origin/main
 from sensor.exception import SensorException
 import sys,os
 from sensor.logger import logging
 from sensor.components.data_ingestion import DataIngestion
 from sensor.components.data_validation import DataValidation
 from sensor.components.data_transformation import DataTransformation
+<<<<<<< HEAD
 from sensor.components.model_trainer import ModelTrainer
 from sensor.components.model_evaluation import ModelEvaluation
 from sensor.components.model_pusher import ModelPusher
@@ -20,6 +24,12 @@ class TrainPipeline:
     def __init__(self):
         self.training_pipeline_config = TrainingPipelineConfig()
         self.s3_sync = S3Sync()
+=======
+class TrainPipeline:
+
+    def __init__(self):
+        self.training_pipeline_config = TrainingPipelineConfig()
+>>>>>>> origin/main
         
 
 
@@ -56,6 +66,7 @@ class TrainPipeline:
         except  Exception as e:
             raise  SensorException(e,sys)
     
+<<<<<<< HEAD
     def start_model_trainer(self,data_transformation_artifact:DataTransformationArtifact):
         try:
             model_trainer_config = ModelTrainerConfig(training_pipeline_config=self.training_pipeline_config)
@@ -119,3 +130,30 @@ class TrainPipeline:
             self.sync_artifact_dir_to_s3()
             TrainPipeline.is_pipeline_running=False
             raise  SensorException(e,sys)
+=======
+    def start_model_trainer(self):
+        try:
+            pass
+        except  Exception as e:
+            raise  SensorException(e,sys)
+
+    def start_model_evaluation(self):
+        try:
+            pass
+        except  Exception as e:
+            raise  SensorException(e,sys)
+
+    def start_model_pusher(self):
+        try:
+            pass
+        except  Exception as e:
+            raise  SensorException(e,sys)
+
+    def run_pipeline(self):
+        try:
+            data_ingestion_artifact:DataIngestionArtifact = self.start_data_ingestion()
+            data_validation_artifact=self.start_data_validaton(data_ingestion_artifact=data_ingestion_artifact)
+            data_transformation_artifact = self.start_data_transformation(data_validation_artifact=data_validation_artifact)
+        except  Exception as e:
+            raise  SensorException(e,sys)
+>>>>>>> origin/main

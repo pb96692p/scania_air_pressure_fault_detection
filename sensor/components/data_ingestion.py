@@ -24,6 +24,10 @@ class DataIngestion:
         try:
             logging.info("Exporting data from mongodb to feature store")
             sensor_data = SensorData()
+<<<<<<< HEAD
+=======
+            print(self.data_ingestion_config.collection_name)
+>>>>>>> origin/main
             dataframe = sensor_data.export_collection_as_dataframe(collection_name=self.data_ingestion_config.collection_name)
             feature_store_file_path = self.data_ingestion_config.feature_store_file_path            
 
@@ -73,6 +77,10 @@ class DataIngestion:
     def initiate_data_ingestion(self) -> DataIngestionArtifact:
         try:
             dataframe = self.export_data_into_feature_store()
+<<<<<<< HEAD
+=======
+            print(dataframe)
+>>>>>>> origin/main
             dataframe = dataframe.drop(self._schema_config["drop_columns"],axis=1)
             self.split_data_as_train_test(dataframe=dataframe)
             data_ingestion_artifact = DataIngestionArtifact(trained_file_path=self.data_ingestion_config.training_file_path,

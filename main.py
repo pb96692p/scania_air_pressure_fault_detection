@@ -6,6 +6,7 @@ from sensor.pipeline import training_pipeline
 from sensor.pipeline.training_pipeline import TrainPipeline
 import os
 from sensor.utils.main_utils import read_yaml_file
+<<<<<<< HEAD
 from sensor.constant.training_pipeline import SAVED_MODEL_DIR
 from fastapi import FastAPI
 from sensor.constant.application import APP_HOST, APP_PORT
@@ -78,15 +79,27 @@ async def predict_route():
 
 def main():
     try:
+=======
+def set_env_variable(env_file_path):
+    env_config = read_yaml_file(env_file_path)
+    os.environ['MONGO_DB_URL']=env_config['MONGO_DB_URL']
+
+if __name__ == '__main__':
+    try:
+        env_file_path ="/config/workspace/env.yaml"
+>>>>>>> origin/main
         set_env_variable(env_file_path)
         training_pipeline = TrainPipeline()
         training_pipeline.run_pipeline()
     except Exception as e:
         print(e)
         logging.exception(e)
+<<<<<<< HEAD
 
 
 if __name__=="__main__":
     #main()
     # set_env_variable(env_file_path)
     app_run(app, host=APP_HOST, port=APP_PORT)
+=======
+>>>>>>> origin/main
