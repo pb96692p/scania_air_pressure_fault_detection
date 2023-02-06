@@ -51,8 +51,6 @@ Before we run the project, make sure that you are having MongoDB in your local s
 ### Step 1: Clone the repository
 ```bash
 <<<<<<< HEAD
-git clone https://github.com/sethusaim/Sensor-Fault-Detection.git
-=======
 https://github.com/pb96692p/scania_air_pressure_fault_detection.git
 >>>>>>> origin/main
 ```
@@ -104,35 +102,11 @@ http://localhost:8080/train
 http://localhost:8080/predict
 
 ```
-
-## Run locally
-
-1. Check if the Dockerfile is available in the project directory
-
-2. Build the Docker image
-```
-docker build --build-arg AWS_ACCESS_KEY_ID=<AWS_ACCESS_KEY_ID> --build-arg AWS_SECRET_ACCESS_KEY=<AWS_SECRET_ACCESS_KEY> --build-arg AWS_DEFAULT_REGION=<AWS_DEFAULT_REGION> --build-arg MONGODB_URL=<MONGODB_URL> . 
-
-```
-
-3. Run the Docker image
-```
-docker run -d -p 8080:8080 <IMAGE_NAME>
-```
-
-<<<<<<< HEAD
-To run the project  first execute the below commmand.
-MONGO DB URL: 
-```
-mongodb+srv://avnish:XglZZ9OkjjUw74pZ@ineuron-ai-projects.7eh1w4s.mongodb.net/admin?authSource=admin&replicaSet=atlas-okvkrd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
-=======
->>>>>>> origin/main
-```
 windows user
 
 ```
 <<<<<<< HEAD
-MONGO_DB_URL=mongodb+srv://avnish:XglZZ9OkjjUw74pZ@ineuron-ai-projects.7eh1w4s.mongodb.net/admin?authSource=admin&replicaSet=atlas-okvkrd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
+export MONGO_DB_URL=mongodb+srv://<username>:<password>cluster0.7eh1w4s.mongodb.net/admin?authSource=admin&replicaSet=atlas-okvkrd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
 =======
 frist save MONGO_DB_URL as a environment variables in widows machine
 >>>>>>> origin/main
@@ -142,8 +116,6 @@ Linux user
 
 ```
 <<<<<<< HEAD
-export MONGO_DB_URL=mongodb+srv://avnish:XglZZ9OkjjUw74pZ@ineuron-ai-projects.7eh1w4s.mongodb.net/admin?authSource=admin&replicaSet=atlas-okvkrd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
-=======
 export MONGO_DB_URL=mongodb+srv://<username>:<password>cluster0.7eh1w4s.mongodb.net/admin?authSource=admin&replicaSet=atlas-okvkrd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
 >>>>>>> origin/main
 ```
